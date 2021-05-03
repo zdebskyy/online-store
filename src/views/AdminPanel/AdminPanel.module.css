@@ -1,0 +1,14 @@
+.container {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.btn {
+  width: 200px;
+  margin-bottom: 10px;
+}
+.btn:last-child {
+  margin-bottom: 0;
+}

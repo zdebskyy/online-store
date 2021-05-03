@@ -1,5 +1,5 @@
 import Auth from "./views/Auth/Auth";
-import AdminPanel from "./views/AdminPanel";
+import AdminPanel from "./views/AdminPanel/AdminPanel";
 import Basket from "./views/Basket";
 import Store from "./views/Store/Store";
 import DeviceItem from "./views/DevicePage/DevicePage";

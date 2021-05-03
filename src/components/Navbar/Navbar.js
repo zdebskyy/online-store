@@ -4,8 +4,10 @@ import { NavLink } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import { Nav, Navbar, Button, Container } from "react-bootstrap";
 import { observer } from "mobx-react-lite";
+import { useHistory } from "react-router-dom";
 
 const NavigationBar = observer(() => {
+  const history = useHistory();
   const { user } = useContext(Context);
   return (
     <>
@@ -16,9 +18,18 @@ const NavigationBar = observer(() => {
           </NavLink>
           {!user.isAuth ? (
             <Nav className={styles.nav}>
-              <Button variant={"outline-light"}>Адміністративна панель</Button>{" "}
-              <Button variant={"outline-light"} className="ml-3">
-                Увійти
+              <Button
+                variant={"outline-light"}
+                onClick={() => history.push("/admin")}
+              >
+                Адмін панель
+              </Button>{" "}
+              <Button
+                variant={"outline-light"}
+                className="ml-3"
+                onClick={() => history.push("/login")}
+              >
+                Вийти
               </Button>
             </Nav>
           ) : (

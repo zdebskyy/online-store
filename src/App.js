@@ -12,7 +12,7 @@ function App() {
     <>
       <NavigationBar />
       <Switch>
-        {user.isAuth &&
+        {!user.isAuth &&
           authRoutes.map(({ path, Component }) => (
             <Route key={path} path={path} component={Component} exact />
           ))}
