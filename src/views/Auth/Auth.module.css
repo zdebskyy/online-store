@@ -1,0 +1,31 @@
+.card {
+  width: 600px;
+  border-radius: 5px;
+  padding: 40px 15px;
+  box-shadow: 2px 2px 10px black;
+}
+.formTitle {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.inputControl {
+  margin-bottom: 12px;
+}
+.inputControl:last-child {
+  margin-bottom: 0;
+}
+
+.btn {
+  margin-bottom: 12px;
+  width: 200px;
+  margin-left: auto;
+}
+.row {
+  display: flex;
+  align-items: center;
+  margin: inherit;
+}

@@ -1,0 +1,17 @@
+.logo {
+  color: white;
+  text-decoration: none;
+  transition: 400ms ease-in-out;
+}
+.logo:hover {
+  color: white;
+  text-decoration: none;
+  transform: scale(1.1);
+  transition: 400ms ease-in-out;
+}
+.navbar {
+  background-color: black;
+}
+.nav {
+  margin-left: auto;
+}

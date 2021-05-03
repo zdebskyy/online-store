@@ -1,8 +1,8 @@
-import Auth from "./views/Auth";
+import Auth from "./views/Auth/Auth";
 import AdminPanel from "./views/AdminPanel";
 import Basket from "./views/Basket";
-import Store from "./views/Store";
-import DeviceItem from "./views/DeviceItem";
+import Store from "./views/Store/Store";
+import DeviceItem from "./views/DevicePage/DevicePage";
 
 export const authRoutes = [
   {
