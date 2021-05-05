@@ -9,6 +9,13 @@ import { useHistory } from "react-router-dom";
 const NavigationBar = observer(() => {
   const history = useHistory();
   const { user } = useContext(Context);
+
+  const logOut = () => {
+    user.setUser({});
+    user.setIsAuth(false);
+    localStorage.setItem("token", "");
+  };
+
   return (
     <>
       <Navbar className={styles.navbar} variant="dark">
@@ -16,7 +23,7 @@ const NavigationBar = observer(() => {
           <NavLink to="/" className={styles.logo}>
              Store
           </NavLink>
-          {!user.isAuth ? (
+          {user.isAuth ? (
             <Nav className={styles.nav}>
               <Button
                 variant={"outline-light"}
@@ -27,14 +34,19 @@ const NavigationBar = observer(() => {
               <Button
                 variant={"outline-light"}
                 className="ml-3"
-                onClick={() => history.push("/login")}
+                onClick={() => logOut()}
               >
                 Вийти
               </Button>
             </Nav>
           ) : (
             <Nav className="ml-auto" style={{ color: "white" }}>
-              <Button variant={"outline-light"}>Авторизація</Button>{" "}
+              <Button
+                variant={"outline-light"}
+                onClick={() => history.push("/login")}
+              >
+                Авторизація
+              </Button>{" "}
             </Nav>
           )}
         </Container>
