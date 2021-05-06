@@ -17,7 +17,12 @@ const DeviceItem = ({ device }) => {
       onClick={() => history.push("/device/" + device.id)}
     >
       <Card className={styles.card}>
-        <Image width={250} height={350} src={url + device.img} />
+        <Image
+          width={250}
+          height={350}
+          src={url + device.img}
+          className={styles.img}
+        />
         <div className="mt-1 d-flex justify-content-between align-items-center">
           <div className="d-flex">
             <div>{device.rating}</div>

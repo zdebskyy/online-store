@@ -27,8 +27,14 @@ export const createDevice = async (device) => {
   return data;
 };
 
-export const getDevice = async () => {
-  const { data } = await axios.get(`${url}api/store/device`);
+export const getDevice = async (brandId, typeId, page, limit = 4) => {
+  const { data } = await axios.get(`${url}api/store/device`, {
+    brandId,
+    typeId,
+    page,
+    limit,
+  });
+
   return data;
 };
 
